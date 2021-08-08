@@ -6,10 +6,12 @@ class Trip {
       this.travelers = tripData.travelers;
       this.date = tripData.date;
       this.duration = tripData.duration;
+    //   need to print the status ino the page
       this.status = tripData.status;
       this.suggestedActivities = tripData.suggestedActivities;
     }
-    //  trip cost?
+    //  trip cost? will come from the destination
+
 
   }
   
