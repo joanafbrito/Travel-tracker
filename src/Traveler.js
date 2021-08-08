@@ -3,6 +3,8 @@ class Traveler {
       this.id = travelerData.id
       this.name = travelerData.name
       this.travelerType = travelerData.travelerType
+      this.trips = [];
+      this.amountSpent = 0;
 
     //   get all my trips ?
     //  get all my trips()
@@ -12,6 +14,10 @@ class Traveler {
     // pendingTrips- not aproved 
 
     // total amount spent during this year
+
+    }
+    getTotalAmoutSpent() {
+        // return this.trips
 
     }
   
