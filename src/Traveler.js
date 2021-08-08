@@ -15,6 +15,12 @@ class Traveler {
 
     // total amount spent during this year
 
+
+    getAllTrips () {
+        
+
+    }
+
     }
     getTotalAmoutSpent() {
         // ????????return let getDestinations = this.trips.map(trip => {

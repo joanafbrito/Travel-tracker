@@ -6,9 +6,9 @@ class TravelerRepository {
     }
 
     //   this will come from the login page 
-    findTravelerByID(userId) {
-        return this.travelers.find(traveler => traveler.id === userId)
-    }
+    // findTravelerByID(userId) {
+    //     return this.travelers.find(traveler => traveler.id === userId)
+    // }
 
     filterAllTravelerTrips(userId) {
         // not sure if i will keep this method here or in the TRaveler

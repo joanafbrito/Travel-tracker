@@ -7,6 +7,7 @@ import Traveler from '../src/Traveler'
 let traveler1, traveler2 
 
 describe('Traveler', () => {
+    
     beforeEach(() => {
       traveler1 = new Traveler (
       {
@@ -38,12 +39,12 @@ describe('Traveler', () => {
         expect(traveler2.id).to.equal(34);
         expect(traveler2.name).to.equal('Alexandr Struss');
         expect(traveler2.type).to.equal('shopper');
-      })
+    })
     
-    //   it('Should start  with no trips', () => {
-    //     expect(traveler1.trips).to.deep.equal([]);
-    //     expect(traveler1.trips).to.have.lengthOf(0);
-    //     expect(traveler2.trips).to.deep.equal([]);
-    //     expect(traveler2.trips).to.have.lengthOf(0);
-    //   })
+    it('Should start  with no trips', () => {
+        expect(traveler1.trips).to.deep.equal([]);
+        expect(traveler1.trips).to.have.lengthOf(0);
+        expect(traveler2.trips).to.deep.equal([]);
+        expect(traveler2.trips).to.have.lengthOf(0);
+    })
     
