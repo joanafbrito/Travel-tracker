@@ -8,3 +8,10 @@ import './css/base.scss';
 import './images/turing-logo.png'
 
 console.log('This is the JavaScript entry file - your code begins here.');
+import Traveler from './Traveler';
+import TravelerRepository from './TravelerRepository';
+import Trip from './Trip';
+import TripRepository from './TripRepository';
+import Destination from './Destination';
+import DestinationRepository from './DestinationRepository';
+import fetch from './fetch';
