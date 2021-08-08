@@ -8,6 +8,11 @@ class Destination {
       this.image = destinationData.image;
       this.alt = destinationData.alt;
     }
+
+    getCost() {
+        // let tripCost = ((this.estimatedLodgingCostPerDay * this.duration) + 
+        //                  (this.estimatedFlightCostPerPerson) ) * number of travelers.
+    }
   
   }
   
