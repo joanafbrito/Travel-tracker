@@ -9,18 +9,18 @@
 <body>
   <main>
     <header>
-      <img src="./images/turing-logo.png" alt="logo" height="100px" width="100px">
-        <h1>Travel Tracker</h1>
+      <img src="./images/turing-logo.png" alt="logo" height="60px" width="60px">
+      <h1>Travel Tracker</h1>
     </header>
     <section class="user-info">
       <div class="user-login">
         <label class="user-name" for="userInput" >Enter Your Username</label>
-        <input class="user-name" id="userInput" type="text" required="required">
+        <input class="user-name" id="userInput" type="text" required="required" >
         <label class="password" for="passwordInput">Enter Your Password</label>
         <input class="password" id="passwordInput" type="password" required="required">
         <button aria-label="submit user and password" type="button" class="submit-user-login">Submit</button>
       </div>
-      <div class="user hidden" >
+      <div class="welcome-user hidden" >
         <h2>`Welcome ${traveler.name} !`</h2>
         <p>`You have spent  a total of $${2000} with trips during this year!`</p>
       </div>
@@ -47,7 +47,7 @@
           <input class="travelers-number" id="travelersNumber" type="number" value="1" min="1" max="10" required="required">
       
           </select>   
-          <!-- <input class="estimated-price" id="estimatedPrice" type="submit" value="Check Price"> -->?
+          <!-- <input class="estimated-price" id="estimatedPrice" type="submit" value="Check Price"> -->
           <p>`Your trip will cost $${2200}`</p>
           <button aria-label="book a trip" type="button" class="book-trip" id="bookTrip">Book Trip</button>
         </form>
