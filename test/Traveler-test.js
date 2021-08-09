@@ -41,7 +41,7 @@ describe('Traveler', () => {
         expect(traveler2.type).to.equal('shopper');
     })
     
-    it('Should start  with no trips', () => {
+    it('Should start with no trips', () => {
         expect(traveler1.trips).to.deep.equal([]);
         expect(traveler1.trips).to.have.lengthOf(0);
         expect(traveler2.trips).to.deep.equal([]);
