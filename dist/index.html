@@ -4,10 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
+  <title>Travel Tracker</title>
 </head>
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
+  <main>
+    <header>
+      <img src="./images/turing-logo.png" alt="logo" height="100px" width="100px">
+        <h1>Travel Tracker</h1>
+    </header>
+    <section class="user-info">
+      <div class="user-login">
+        <label class="user-name" for="userInput" >Enter Your Username</label>
+        <input class="user-name" id="userInput" type="text" required="required">
+        <label class="password" for="passwordInput">Enter Your Password</label>
+        <input class="password" id="passwordInput" type="password" required="required">
+        <button aria-label="submit user and password" type="button" class="submit-user-login">Submit</button>
+      </div>
+      <div class="user hidden" >
+        <h2>`Welcome ${traveler.name} !`</h2>
+        <p>`You have spent  a total of $${2000} with trips during this year!`</p>
+      </div>
+    </section>
+    <section class ="destinations" id="destinationsList">
+      <h2>Choose your Next Trip</h2>
+
+      <!-- <label class="select-destination" for="selectDestination">Choose a destination.</label>
+      <select class="select-destination" id="selectDestination" required="required"> -->
+      <!-- carrossel de imagens com a possibilidade de selecionar ( nao sei ainda como fazer a escolha da image) -->
+    </section>
+    <section class="trips">
+      <div class="next-trip-form hidden">
+        <form class="trip-booking">
+          <h2>Book your Next Trip</h2>
+
+          <label class="trip-date" for="dateInput">Choose a day to arrive.</label>
+          <input class="trip-date" id="dateInput" type="date" required="required">
+
+          <label class="trip-days" for="durationInput">Choose a number of days</label>
+          <input class="trip-days" id="durationInput" type="number" value="1" min="1" max="10" required="required">
+      
+          <label class="travelers-number" for="travelersNumber">Choose a number of travelers</label>
+          <input class="travelers-number" id="travelersNumber" type="number" value="1" min="1" max="10" required="required">
+      
+          </select>   
+          <!-- <input class="estimated-price" id="estimatedPrice" type="submit" value="Check Price"> -->?
+          <p>`Your trip will cost $${2200}`</p>
+          <button aria-label="book a trip" type="button" class="book-trip" id="bookTrip">Book Trip</button>
+        </form>
+      </div>
+      <div class="all-user-trips hidden">
+        <h2>Your Trips</h2>
+<!-- all the user trips / past trips/ present trips/ upcoming trips/ pending trips -->
+      </div>
+    </section>
+  </main>
   
   <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
   <script src="bundle.js"></script>

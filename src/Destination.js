@@ -9,7 +9,8 @@ class Destination {
       this.alt = destinationData.alt;
     }
 
-    getCost() {
+    getCost(travelers, duration ) {
+        // trip data - travelers/ days 
         // let tripCost = ((this.estimatedLodgingCostPerDay * this.duration) + 
         //                  (this.estimatedFlightCostPerPerson) ) * number of travelers.
     }
