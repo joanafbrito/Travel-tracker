@@ -16,3 +16,4 @@ import TripRepository from './TripRepository';
 import Destination from './Destination';
 import DestinationRepository from './DestinationRepository';
 import fetch from './fetch';
+import domUpdate from './domUpdate';
