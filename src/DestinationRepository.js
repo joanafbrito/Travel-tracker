@@ -5,9 +5,6 @@ class DestinationRepository {
     this.destinations = data.map(destinationData => new Destination(destinationData));
   }
 
-//   getCost() {
-
-//   }
 }
 
 export default DestinationRepository;

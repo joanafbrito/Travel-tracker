@@ -1,16 +1,18 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-import data from './sampleData'
+import {sampleData} from './sampleData'
 import Trip from '../src/Trip'
 import TripRepository from '../src/TripRepository';
 
-let tripRepo1, tripRepo2 
+// let tripRepo1 
 
 describe('TripRepository', () => {
-    
+
+    let tripRepo1
+
     beforeEach(() => {
-      tripRepo1 = new TripRepository (data.tripsSample)
+      tripRepo1 = new TripRepository (sampleData.tripsSample[0]);
     //   {
     //     "id": 1,
     //     "userID": 44,
@@ -20,7 +22,8 @@ describe('TripRepository', () => {
     //     "duration": 8,
     //     "status": "approved",
     //     "suggestedActivities": []
-    //   });
+    //   }
+    });
   
     it('should be a function', () => {
       expect(TripRepository).to.be.a('function');
@@ -41,7 +44,11 @@ describe('TripRepository', () => {
                 "duration": 8,
                 "status": "approved",
                 "suggestedActivities": []
-              }););
+              });
+    
+
         expect(tripRepo1).to.have.lengthOf(10);
 
     })
+
+})
