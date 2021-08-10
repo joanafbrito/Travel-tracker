@@ -9,7 +9,7 @@
 <body>
   <main>
     <header>
-      <img src="./images/turing-logo.png" alt="logo" height="60px" width="60px">
+      <img src="./images/travel.svg" alt="logo" height="80px" width="80px">
       <h1>Travel Tracker</h1>
     </header>
     <section class="user-info">
@@ -55,6 +55,16 @@
       <div class="all-user-trips hidden">
         <h2>Your Trips</h2>
 <!-- all the user trips / past trips/ present trips/ upcoming trips/ pending trips -->
+        <section class="user-trip" >
+          <img class="destination-img" src="${destination.image}" alt="photo of the destination">
+          <h3>Your trip to: ${destination.destination}.</h3>
+          <p>Trip status: ${trip.status}</p>
+          <p>Trip date: ${trip.date}</p>
+          <p>Trip duration: ${trip.duration}</p>
+          <p>Number of Travelers: ${trip.travelers}</p>
+          <p>Lodging per day: ${destination.estimatedLodgingCostPerDay}</p>
+          <p>Flight per person: ${destination.estimatedFlightCostPerPerson}</p>
+        </section>
       </div>
     </section>
   </main>

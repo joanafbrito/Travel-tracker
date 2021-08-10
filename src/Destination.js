@@ -4,15 +4,17 @@ class Destination {
       this.destination = destinationData.destination;
       this.estimatedLodgingCostPerDay = destinationData.estimatedLodgingCostPerDay;
       this.estimatedFlightCostPerPerson = destinationData.estimatedFlightCostPerPerson;
-      this.duration = destinationData.duration;
       this.image = destinationData.image;
       this.alt = destinationData.alt;
     }
 
-    getCost(travelers, duration ) {
-        // trip data - travelers/ days 
-        // let tripCost = ((this.estimatedLodgingCostPerDay * this.duration) + 
-        //                  (this.estimatedFlightCostPerPerson) ) * number of travelers.
+    getTripCost(travelersNum, duration ) {
+            //   get trip cost
+    // add trip cost to 10%  agent fee and return only the total coswt 
+        // trip data - travelers/ days - will come from the trip data and dominput
+        let tripCost = (this.estimatedLodgingCostPerDay * duration) + (this.estimatedFlightCostPerPerson * travelersNum);
+        let agentFee = tripCost * 0.1;
+        return tripCost + agentFee; 
     }
   
   }
