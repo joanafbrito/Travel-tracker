@@ -17,7 +17,9 @@ class Traveler {
 
 
     getAllTrips () {
-        
+        let userTrips = this.trips.push(TripRepository.getTripsByUserId(this.id));
+
+        return userTrips;
 
     }
 
