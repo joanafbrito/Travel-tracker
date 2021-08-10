@@ -12,6 +12,11 @@ class Trip {
     }
     //  trip cost? will come from the destination
 
+    bookNewTrip(destinationid) {
+        // from the input this.destinationID, this.travelers, this.date,this.duration
+        // this.status = pending
+        // this.id = traveler.trips.length + 1 
+    }
 
   }
   

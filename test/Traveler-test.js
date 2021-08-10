@@ -32,13 +32,13 @@ describe('Traveler', () => {
       expect(traveler2).to.be.an.instanceOf(Traveler);
     })
 
-    it('Should have traveler data', () => {
+    it('Should have all the traveler data', () => {
         expect(traveler1.id).to.equal(1);
         expect(traveler1.name).to.equal('Ham Leadbeater');
-        expect(traveler1.type).to.equal('relaxer');
+        expect(traveler1.travelerType).to.equal('relaxer');
         expect(traveler2.id).to.equal(34);
         expect(traveler2.name).to.equal('Alexandr Struss');
-        expect(traveler2.type).to.equal('shopper');
+        expect(traveler2.travelerType).to.equal('shopper');
     })
     
     it('Should start with no trips', () => {

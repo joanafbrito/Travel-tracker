@@ -14,33 +14,32 @@ class Traveler {
     // pendingTrips- not aproved 
 
     // total amount spent during this year
-
+    }
 
     getAllTrips () {
         let userTrips = this.trips.push(TripRepository.getTripsByUserId(this.id));
 
         return userTrips;
-
     }
 
-    }
-    getTotalAmoutSpent() {
-        // ????????return let getDestinations = this.trips.map(trip => {
-            // if (trip.destinationID === destination.id ) {
-                // destination.getCost()
-            // }
 
-            // return let getDestinations = this.trips.reduce((acc, trip) => {
-                // how to get the destinationid?
-            //  if (trip.destinationID === destination.id ) {
-                // acc += destination.getCost()
-                // }
-            // },0);
+    getTotalAmoutSpent(currentYear) {
 
+        let currentYearTrips = this.trips.filter(trip => {
+            if (trip.date.includes(currentYear)) {
+                return trip 
+            }
+        })
 
+        let totalCost = currentYearTrips.reduce((acc, trip) => {
+            // how to get the destinationid?
+         if (trip.destinationID === destination.id ) {
+            acc += destination.getTripCost(trip.travelers, trip.duration)
+            }
+            return acc
+        },0)
 
-            // forEach(destiantion = destinationID === destination.id)
-            // getCost()})
+        return totalCost;
 
     }
   

@@ -7,7 +7,8 @@ class TripRepository {
 
   getTripsByUserId(userid) {
 
-    return this.trips.filter(trip => trip.userID === userid)
+    let userTrips = this.trips.filter(trip => trip.userID === userid)
+    return userTrips;
     // this result i need to push into the traveler array
 
 
