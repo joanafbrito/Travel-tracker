@@ -13,16 +13,16 @@
       <h1>Travel Tracker</h1>
     </header>
     <section class="user-info">
-      <div class="user-login">
+      <form class="user-login">
         <label class="user-name" for="userInput" >Enter Your Username</label>
         <input class="user-name" id="userInput" type="text" required="required" >
         <label class="password" for="passwordInput">Enter Your Password</label>
         <input class="password" id="passwordInput" type="password" required="required">
         <button aria-label="submit user and password" type="button" class="submit-user-login">Submit</button>
-      </div>
+      </form>
       <div class="welcome-user hidden" >
-        <h2>`Welcome ${traveler.name} !`</h2>
-        <p>`You have spent  a total of $${2000} with trips during this year!`</p>
+        <h2></h2>
+        <p>You have spent  a total of <strong>$<span></span></strong> with trips during this year!</p>
       </div>
     </section>
     <section class ="destinations" id="destinationsList">
@@ -33,38 +33,33 @@
       <!-- carrossel de imagens com a possibilidade de selecionar ( nao sei ainda como fazer a escolha da image) -->
     </section>
     <section class="trips">
-      <div class="next-trip-form hidden">
+      <div class="next-trip-form ">
         <form class="trip-booking">
           <h2>Book your Next Trip</h2>
-
-          <label class="trip-date" for="dateInput">Choose a day to arrive.</label>
-          <input class="trip-date" id="dateInput" type="date" required="required">
-
-          <label class="trip-days" for="durationInput">Choose a number of days</label>
-          <input class="trip-days" id="durationInput" type="number" value="1" min="1" max="10" required="required">
-      
-          <label class="travelers-number" for="travelersNumber">Choose a number of travelers</label>
-          <input class="travelers-number" id="travelersNumber" type="number" value="1" min="1" max="10" required="required">
-      
-          </select>   
+          <div class="input-container">
+            <label class="trip-date" for="dateInput">Choose a day to arrive.</label>
+            <input class="trip-date" id="dateInput" type="date" required="required">
+          </div>
+          <div class="input-container">
+            <label class="trip-days" for="durationInput">Choose a number of days</label>
+            <input class="trip-days" id="durationInput" type="number" value="1" min="1" max="10" required="required">
+          </div>
+          <div class="input-container">
+            <label class="travelers-number" for="travelersNumber">Choose a number of travelers</label>
+            <input class="travelers-number" id="travelersNumber" type="number" value="1" min="1" max="10" required="required">
+          </div>
+          <div class="input-container">
+            <label for="next-destinations">Choose your Next destination</label>
+            <select name="next-destinations" id="next-destinations"><option>Select a destination</option></select> 
+          </div>
           <!-- <input class="estimated-price" id="estimatedPrice" type="submit" value="Check Price"> -->
-          <p>`Your trip will cost $${2200}`</p>
+          <p id="tripCost">Your trip will cost $<span></span></p>
           <button aria-label="book a trip" type="button" class="book-trip" id="bookTrip">Book Trip</button>
         </form>
       </div>
-      <div class="all-user-trips hidden">
+      <div class="all-user-trips">
         <h2>Your Trips</h2>
 <!-- all the user trips / past trips/ present trips/ upcoming trips/ pending trips -->
-        <section class="user-trip" >
-          <img class="destination-img" src="${destination.image}" alt="photo of the destination">
-          <h3>Your trip to: ${destination.destination}.</h3>
-          <p>Trip status: ${trip.status}</p>
-          <p>Trip date: ${trip.date}</p>
-          <p>Trip duration: ${trip.duration}</p>
-          <p>Number of Travelers: ${trip.travelers}</p>
-          <p>Lodging per day: ${destination.estimatedLodgingCostPerDay}</p>
-          <p>Flight per person: ${destination.estimatedFlightCostPerPerson}</p>
-        </section>
       </div>
     </section>
   </main>
