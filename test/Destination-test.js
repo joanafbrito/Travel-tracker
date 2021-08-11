@@ -27,16 +27,16 @@ describe('Destination', () => {
       });
     })
   
-    it('should be a function', () => {
+    it.skip('should be a function', () => {
       expect(Destination).to.be.a('function');
     })
   
-    it('Should instantiate a Destination', () => {
+    it.skip('Should instantiate a Destination', () => {
       expect(destination1).to.be.an.instanceOf(Destination);
       expect(destination2).to.be.an.instanceOf(Destination);
     })
 
-    it('Should have all the Destination data', () => {
+    it.skip('Should have all the Destination data', () => {
         expect(destination1.id).to.equal(1);
         expect(destination1.destination).to.equal('Lima, Peru');
         expect(destination1.estimatedLodgingCostPerDay).to.equal(70);
@@ -47,9 +47,14 @@ describe('Destination', () => {
         expect(destination2.id).to.equal(8);
         expect(destination2.destination).to.equal('Tokyo, Japan');
         expect(destination2.estimatedLodgingCostPerDay).to.equal(125);
-        expect(destination1.estimatedFlightCostPerPerson).to.equal(400);
+        expect(destination2.estimatedFlightCostPerPerson).to.equal(1000);
         expect(destination2.image).to.equal("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1971&q=80");
         expect(destination2.alt).to.equal("city with people walking in crosswalk and brightly lit shops at night");
-    })     
+    }) 
+    
+    it.skip('Should return the cost of a trip', () => {
+      expect(destination1.getTripCost(5, 10)).to.equal(2970);
+      expect(destination2.getTripCost(5, 10)).to.equal(6875);
+    })
 })
     
