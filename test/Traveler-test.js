@@ -1,7 +1,7 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-import data from './sampleData'
+import {sampleData} from './sampleData'
 import Traveler from '../src/Traveler'
 
 let traveler1, traveler2 
@@ -47,4 +47,6 @@ describe('Traveler', () => {
         expect(traveler2.trips).to.deep.equal([]);
         expect(traveler2.trips).to.have.lengthOf(0);
     })
+
+})
     

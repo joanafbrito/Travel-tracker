@@ -7,7 +7,6 @@ class TripRepository {
   }
 
   getTripsByUserId(userid) {
-
     let userTrips = this.trips.filter(trip => trip.userID === userid)
     return userTrips;
   }
