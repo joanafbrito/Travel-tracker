@@ -1,9 +1,12 @@
+import {fetchUserData,travelerRepo, tripRepo, destinationRepo} from './fetch';
+
+
 class Traveler {
     constructor(currentUserData) {
       this.id = currentUserData.id
       this.name = currentUserData.name
       this.travelerType = currentUserData.travelerType
-      this.trips = [];
+      this.trips = tripRepo.getTripsByUserId(this.id);
       this.amountSpent = 0;
 
     //   get all my trips ?
@@ -16,11 +19,11 @@ class Traveler {
     // total amount spent during this year
     }
 
-    getAllTrips () {
-        let userTrips = this.trips.push(TripRepository.getTripsByUserId(this.id));
+    // getAllTrips () {
+    //     let userTrips = this.trips.push(TripRepository.getTripsByUserId(this.id));
 
-        return userTrips;
-    }
+    //     return userTrips;
+    // }
 
 
     getTotalAmoutSpent(currentYear) {
@@ -32,10 +35,12 @@ class Traveler {
         })
 
         let totalCost = currentYearTrips.reduce((acc, trip) => {
-            // how to get the destinationid?
-         if (trip.destinationID === destination.id ) {
+
+            let destination = destinationRepo.destinations.find(item => item.id === trip.destinationID)
+        
+          
             acc += destination.getTripCost(trip.travelers, trip.duration)
-            }
+            
             return acc
         },0)
 

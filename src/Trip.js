@@ -1,3 +1,5 @@
+import {fetchUserData,travelerRepo, tripRepo, destinationRepo} from './fetch';
+
 class Trip {
     constructor(tripData) {
       this.id = tripData.id;

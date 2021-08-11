@@ -1,4 +1,5 @@
 import Destination from './Destination';
+import {fetchUserData,travelerRepo, tripRepo, destinationRepo} from './fetch';
 
 class DestinationRepository {
   constructor(data) {
