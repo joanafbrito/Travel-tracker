@@ -9,7 +9,7 @@
 <body>
   <main>
     <header>
-      <img src="./images/travel.svg" alt="logo" height="80px" width="80px">
+      <img src="./images/travel.svg" alt="logo" height="100px" width="80px">
       <h1>Travel Tracker</h1>
     </header>
     <section class="user-info">
@@ -27,10 +27,6 @@
     </section>
     <section class ="destinations" id="destinationsList">
       <h2>Choose your Next Trip</h2>
-
-      <!-- <label class="select-destination" for="selectDestination">Choose a destination.</label>
-      <select class="select-destination" id="selectDestination" required="required"> -->
-      <!-- carrossel de imagens com a possibilidade de selecionar ( nao sei ainda como fazer a escolha da image) -->
     </section>
     <section class="trips">
       <div class="next-trip-form ">
@@ -52,20 +48,17 @@
             <label for="next-destinations">Choose your Next destination</label>
             <select name="next-destinations" id="next-destinations"><option>Select a destination</option></select> 
           </div>
-          <!-- <input class="estimated-price" id="estimatedPrice" type="submit" value="Check Price"> -->
           <p id="tripCost">Your trip will cost $<span></span></p>
           <button aria-label="book a trip" type="button" class="book-trip" id="bookTrip">Book Trip</button>
         </form>
       </div>
       <div class="all-user-trips">
         <h2>Your Trips</h2>
-<!-- all the user trips / past trips/ present trips/ upcoming trips/ pending trips -->
+        <!-- all the user trips / past trips/ present trips/ upcoming trips/ pending trips -->
       </div>
     </section>
   </main>
-  
   <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
   <script src="bundle.js"></script>
-
 </body>
 </html>
