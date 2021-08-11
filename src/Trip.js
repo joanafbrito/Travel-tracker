@@ -1,16 +1,16 @@
 class Trip {
-    constructor(tripData) {
+    constructor(tripData, destinationRepo) {
       this.id = tripData.id;
       this.userID = tripData.userID;
       this.destinationID = tripData.destinationID;
+      this.destination = destinationRepo.destinations.find(item => item.id === tripData.destinationID)
       this.travelers = tripData.travelers;
       this.date = tripData.date;
       this.duration = tripData.duration;
-    //   need to print the status ino the page
       this.status = tripData.status;
       this.suggestedActivities = tripData.suggestedActivities;
     }
-    //  trip cost? will come from the destination
+    
 
     bookNewTrip(destinationid) {
         // from the input this.destinationID, this.travelers, this.date,this.duration
