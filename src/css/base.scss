@@ -51,8 +51,8 @@ h2 {
 
 .destinations {
   color: $button-color;
-  padding:1%;
-  text-align:center ;
+  padding: 1%;
+  text-align: center;
 }
 
 .trips {
@@ -65,7 +65,7 @@ h2 {
 
 .next-trip-form {
   border-radius: 5px;
-  padding:5%;
+  padding: 5%;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(https://www.riotgames.com/darkroom/1440/b2b587d91d3c5d2922953ac62fbb2cb8:dfd0d5c2d07f981fb8cda29623b5e54e/paris.jpg);
@@ -76,8 +76,8 @@ h2 {
 }
 
 .all-user-trips h2 {
-  color:$button-color;
-  padding:5%;
+  color: $button-color;
+  padding: 5%;
   text-align: center;
   text-shadow: none;
 }
@@ -88,8 +88,8 @@ h2 {
 
   .user-trip {
     margin-bottom: 40px;
-    padding:3%;
-    position:relative;
+    padding: 3%;
+    position: relative;
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,11 +98,11 @@ h2 {
       content: ' ';
       display: block;
       position: absolute;
-      z-index:0;
+      z-index: 0;
       width: 100%;
       height: 100%;
-      top:0;
-      left:0;
+      top: 0;
+      left: 0;
       background-color: #0009;
     }
     h3,
@@ -121,16 +121,15 @@ button {
   height: 30px;
   border-radius: 5px;
   background-color: $second-color;
-  color:$button-color;
+  color: $button-color;
   font-weight: bold;
-  &:hover{
+  &:hover {
     cursor: pointer;
     background-color: greenyellow;
   }
 }
 
 span {
-  color:greenyellow;
-  
+  color:greenyellow; 
 }
 
