@@ -3,8 +3,8 @@ import TripRepository from './TripRepository';
 import DestinationRepository from './DestinationRepository';
 import Traveler from './Traveler';
 
-//Repostories
-let travelerRepo, tripRepo, destinationRepo, currentUser
+//Repositories
+let travelerRepo, tripRepo, destinationRepo
 //  activityRepo
 
 //DATA Fetching
@@ -21,9 +21,9 @@ let fetchUserData = (userId) => {
       .then(res => {
         return res.ok ? res.json() : console.log(`ERROR with ${userId} path`)
       })
-      .then((userData) => {
-        updateCurrentUser(userData)
-      })
+      // .then((userData) => {
+      //   updateCurrentUser(userData)
+      // })
     //   userData = new Traveler(userId)?
     //   updateCurrentUser(userData);
 } 
@@ -46,11 +46,13 @@ let updateData = (data) => {
         //   updateDOM()
 }
     
-let updateCurrentUser = (userData) => {
-        // console.log(userData)
-    currentUser = new Traveler(userData);
-    console.log(currentUser)
-}
+// let updateCurrentUser = (userData) => {
+//         // console.log(userData)
+//     currentUser = new Traveler(userData);
+//     console.log(currentUser)
+// }
     
-fetchUserData(1);
+// fetchUserData(1);
     // console.log('hg')- this line of code runs before the promisses being answered .
+
+export {fetchUserData, travelerRepo, tripRepo, destinationRepo}
