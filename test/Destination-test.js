@@ -47,7 +47,7 @@ describe('Destination', () => {
         expect(destination2.id).to.equal(8);
         expect(destination2.destination).to.equal('Tokyo, Japan');
         expect(destination2.estimatedLodgingCostPerDay).to.equal(125);
-        expect(destination1.estimatedFlightCostPerPerson).to.equal(1000);
+        expect(destination1.estimatedFlightCostPerPerson).to.equal(400);
         expect(destination2.image).to.equal("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1971&q=80");
         expect(destination2.alt).to.equal("city with people walking in crosswalk and brightly lit shops at night");
     })     

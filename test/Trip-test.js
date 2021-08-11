@@ -3,14 +3,17 @@ const expect = chai.expect;
 
 import {sampleData} from './sampleData'
 import Trip from '../src/Trip'
+import DestinationRepository from '../src/DestinationRepository'
+
+let trip1, trip2, destinationRepo1
 
 describe('Trip', () => {
-    
-  let trip1, trip2 
 
   beforeEach(() => {
-    trip1 = new Trip (sampleData.tripsSample[0]);
-    trip2 = new Trip (sampleData.tripsSample[9]);
+    destinationRepo1 = new DestinationRepository (sampleData.destinationsSample)
+
+    trip1 = new Trip (sampleData.tripsSample[0], destinationRepo1);
+    trip2 = new Trip (sampleData.tripsSample[9], destinationRepo1);
   })
   
   it('should be a function', () => {
