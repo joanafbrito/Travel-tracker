@@ -22,7 +22,7 @@ Now, I'm spending my days learning code. As a woman I can contribuit to build a 
 
 ## Learning Goals
 
-Project Spec: [link](https://frontend.turing.edu/projects/travel-tracker.html "Spec)"
+Project Spec: [link](https://frontend.turing.edu/projects/travel-tracker.html "Spec")
 
 Work with GitHub projects as a project board
 Work with an API to GET and POST data
@@ -61,11 +61,11 @@ and then:
 
 src/open index.html
 
-or click the link:[Add deployed link here]
+<!-- or click the link:[Add deployed link here] -->
 
-## Illustrations
-
-Add gif/screenshots here
+<!-- ## Illustrations -->
+<!-- 
+Add gif/screenshots here -->
 
 ## Wins
 
