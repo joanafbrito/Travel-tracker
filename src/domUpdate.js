@@ -68,7 +68,8 @@ const createTripCard = (trip) => {
   return card;
 }
 
-const submitNewTrip = () => {
+const submitNewTrip = (e) => {
+  e.preventDefault()
   let parameters = {
     id: new Date().getTime(),
     userID: currentUser.id, 
