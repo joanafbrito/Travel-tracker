@@ -1,25 +1,32 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-import Traveler from '../src/Traveler'
 
-let traveler1, traveler2 
+import Traveler from '../src/Traveler'
+import Trip from '../src/Trip'
+import DestinationRepository from '../src/DestinationRepository'
+import {sampleData} from './sampleData'
+import TripRepository from '../src/TripRepository';
+
+let traveler1, traveler2, destinationRepo1, trip1
 
 describe('Traveler', () => {
     
   beforeEach(() => {
-    traveler1 = new Traveler (
-      {
+    destinationRepo1 = new DestinationRepository (sampleData.destinationsSample)
+    trip1 = new TripRepository (sampleData.tripsSample, destinationRepo1);
+
+    traveler1 = new Traveler ({
         "id": 1,
         "name": "Ham Leadbeater",
         "travelerType": "relaxer"
-      });
+      }, trip1)
     traveler2 = new Traveler (
       {
         "id": 34,
         "name": "Alexandr Struss",
         "travelerType": "shopper"
-      });
+      }, trip1)
   })
   
   it('should be a function', () => {
@@ -46,6 +53,5 @@ describe('Traveler', () => {
     expect(traveler2.trips).to.deep.equal([]);
     expect(traveler2.trips).to.have.lengthOf(0);
   })
-
 })
     
