@@ -3,7 +3,6 @@ const expect = chai.expect;
 
 
 import Traveler from '../src/Traveler'
-import Trip from '../src/Trip'
 import DestinationRepository from '../src/DestinationRepository'
 import {sampleData} from './sampleData'
 import TripRepository from '../src/TripRepository';
@@ -53,5 +52,6 @@ describe('Traveler', () => {
     expect(traveler2.trips).to.deep.equal([]);
     expect(traveler2.trips).to.have.lengthOf(0);
   })
+  
 })
     
