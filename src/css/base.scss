@@ -1,45 +1,52 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-;
+
+$primary-background: #dedede;
+$second-color:aliceblue;
+$button-color:#1a1b71;
+
 .hidden {
   display: none;
 }
 
 body {
-  background: #dedede
+  background:$primary-background;
 }
 section {
-  color:aliceblue
+  color:$second-color;
 }
 
 header {
   display: flex;
   flex-direction: row;
+  justify-content: right;
 }
 
 header h1 {
-  margin-left: 20px;
-  color: #1a1b71;
+  color:$button-color;
+  padding: 2%;
+  text-align: center;
 }
 
 .user-info {
-  padding: 5%;
   display: flex;
   flex-direction: column;
+  padding: 5%;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: url( https://www.gousa.in/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-01/Getty_596330521_SantaMonicaPierVeniceBeach_Web72DPI_0.jpg?itok=QBhhVqG4)
 }
 
 .user-info .user-login {
-  color: aliceblue;
+  border-radius: 5px;
+  text-align: center;
+  color: $second-color;
   font-size: 20px;
   text-shadow: 0px 0px 4px black;
 }
 
 .destinations {
+  color: $button-color;
   padding:1%;
-  color: #1a1b71;
   text-align:center ;
 }
 
@@ -50,15 +57,21 @@ header h1 {
 }
 
 .next-trip-form {
+  border-radius: 5px;
   padding:5%;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(https://www.riotgames.com/darkroom/1440/b2b587d91d3c5d2922953ac62fbb2cb8:dfd0d5c2d07f981fb8cda29623b5e54e/paris.jpg);
-
 }
 
 .input-container {
   display: block;
+}
+
+.all-user-trips h2 {
+  color:$button-color;
+  padding:5%;
+  text-align: center;
 }
 
 .all-user-trips {
@@ -67,9 +80,9 @@ header h1 {
 
   .user-trip {
     margin-bottom: 40px;
+    padding:3%;
     position:relative;
     overflow: hidden;
-    padding:3%;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -86,21 +99,30 @@ header h1 {
     }
     h3,
     p {
-      position:relative;
-    
+      position:relative;   
     }
-
-    // img {
-    //   width: 100%;
-    //   position:absolute;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: -1;
-    //   filter: brightness(40%);
-
-    // }
-
   }
 }
 
+input {
+  border-radius: 5px;
+  height: 25px;
+}
+
+button {
+  height: 30px;
+  border-radius: 5px;
+  background-color: $second-color;
+  color:$button-color;
+  font-weight: bold;
+  &:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+  }
+}
+
+span {
+  color:greenyellow;
+  
+}
 

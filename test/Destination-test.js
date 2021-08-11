@@ -1,13 +1,11 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-import {sampleData} from './sampleData'
 import Destination from '../src/Destination'
 
-let destination1, destination2 
-
 describe('Destination', () => {
-    
+  let destination1, destination2 
+
     beforeEach(() => {
       destination1 = new Destination (
       {
@@ -52,9 +50,6 @@ describe('Destination', () => {
         expect(destination1.estimatedFlightCostPerPerson).to.equal(1000);
         expect(destination2.image).to.equal("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1971&q=80");
         expect(destination2.alt).to.equal("city with people walking in crosswalk and brightly lit shops at night");
-    })
-    
-    // it('Should ', () => {
-      
-})   // })
+    })     
+})
     
